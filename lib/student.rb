@@ -56,10 +56,10 @@ class Student
   #   student
   # end
   #
-  # def update
-  #   sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
-  #   DB[:conn].execute(sql, self.name, self.grade, self.id)
-  # end
+  def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.id)
+  end
   #
   # def self.find_by_name(name)
   #   sql = <<-SQL
