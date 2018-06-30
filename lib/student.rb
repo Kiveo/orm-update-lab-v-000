@@ -29,12 +29,14 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def save #create a row and prevent duplicates
+  def save #create a row, assign its id, and prevent duplicates
     if...
     sql = <<-SQL
-      INSERT INTO students ()
-      VALUES ()
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
     SQL
+    DB[:conn].execute(sql, self.name, self.grade)
+
   end
 
 end
