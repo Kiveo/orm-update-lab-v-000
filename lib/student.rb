@@ -42,7 +42,7 @@ class Student
     end
   end
 
-  def self.create(:name, :grade)
+  def self.create(name:, grade:)
     student = Student.new(name, grade)
     student.save
     student
@@ -51,7 +51,7 @@ class Student
   def self.new_from_db(row_array)
     student = Student.new(row[0], row[1], row[2])    #id, name, grade
     student.save
-    student    
-  end 
-  
+    student
+  end
+
 end
