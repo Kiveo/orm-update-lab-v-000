@@ -42,7 +42,7 @@ class Student
     end
   end
 
-  def self.create(name:, grade:)
+  def create(name:, grade:)
     student = Student.new(name, grade)
     student.save
     student
@@ -65,7 +65,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = ?
     SQL
-    DB[:conn].execute(sql, self.name)[0][1]
+    DB[:conn].execute(sql, self.name)
   end
 
 
