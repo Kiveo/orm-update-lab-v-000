@@ -49,7 +49,7 @@ class Student
   end
 
   def self.new_from_db(row)
-    student = self.new    #id, name, grade
+    student = self.new    #id, name, grade are row[0-2]
     student.id = row[0]
     student.name = row[1]
     student.grade[2]
