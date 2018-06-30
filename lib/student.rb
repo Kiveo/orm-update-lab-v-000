@@ -25,9 +25,16 @@ class Student
   def self.drop_table
     sql = <<-SQL
       DROP TABLE students
-      SQL
+    SQL
     DB[:conn].execute(sql)
   end
 
+  def save #create a row and prevent duplicates
+    if...
+    sql = <<-SQL
+      INSERT INTO students ()
+      VALUES ()
+    SQL
+  end
 
 end
