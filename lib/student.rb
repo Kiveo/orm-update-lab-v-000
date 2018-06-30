@@ -51,8 +51,8 @@ class Student
   def self.new_from_db(row)
     student = Student.new(row[1],row[2],row[0])    #id, name, grade are row[0-2]
     # student.id = row[0]
-    student.name = row[1]
-    student.grade = row[2]
+    # student.name = row[1]
+    # student.grade = row[2]
     student
   end
 
